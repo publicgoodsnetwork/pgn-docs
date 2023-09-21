@@ -1,5 +1,7 @@
 import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
+import { useRouter } from 'next/router'
+import { useConfig } from 'nextra-theme-docs'
 import NextScript from "next/script";
 
 
@@ -149,33 +151,42 @@ const config: DocsThemeConfig = {
   }
 };
 
-const CustomHead: React.FC = () => (
+const CustomHead: React.FC = () => {
+  const { asPath, defaultLocale, locale } = useRouter()
+  const { frontMatter } = useConfig()
+  const url = 'https://docs.publicgoods.network' + (defaultLocale === locale ? asPath : `/${locale}${asPath}`)
+  
+  return (
     <>
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@pgn_eth" />
       <meta name="twitter:image" content="https://docs.publicgoods.network/social-card.png" />
-      <meta name="og:title" content="Public Goods Network"  />
-      <meta name="og:description" content="PGN: Secure the future of public goods"  />
+
+      <meta property="og:url" content={url} />
+      <meta property="og:title" content={frontMatter.title || 'Public Goods Network'}  />
+      <meta property="og:description" content={frontMatter.description || 'PGN: Secure the future of public goods'}  />
       <meta name="og:image" content="https://docs.publicgoods.network/social-card.png" />
+
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XJ8H07N5T"></script>
       <NextScript>
       {/* Add the Google Analytics script */}
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-7XJ8H07N5T"
-      ></script>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-7XJ8H07N5T');
-          `,
-        }}
-      ></script>
-    </NextScript>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-7XJ8H07N5T"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-7XJ8H07N5T');
+            `,
+          }}
+        ></script>
+      </NextScript>
     </>
   );
+};
 
 export default { ...config, head: CustomHead };
