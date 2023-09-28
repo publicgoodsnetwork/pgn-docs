@@ -159,12 +159,14 @@ const CustomHead: React.FC = () => {
   return (
     <>
       <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content={frontMatter.title || 'Public Goods Network'} />
+      <meta name="twitter:description" content='PGN: Secure the future of public goods'  />
       <meta name="twitter:site" content="@pgn_eth" />
       <meta name="twitter:image" content="https://docs.publicgoods.network/social-card.png" />
 
       <meta property="og:url" content={url} />
       <meta property="og:title" content={frontMatter.title || 'Public Goods Network'}  />
-      <meta property="og:description" content={frontMatter.description || 'PGN: Secure the future of public goods'}  />
+      <meta property="og:description" content='PGN: Secure the future of public goods'  />
       <meta name="og:image" content="https://docs.publicgoods.network/social-card.png" />
 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XJ8H07N5T"></script>
