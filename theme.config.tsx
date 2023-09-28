@@ -2,7 +2,7 @@ import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
-import NextScript from "next/script";
+import Script from "next/script";
 
 
 const config: DocsThemeConfig = {
@@ -100,7 +100,7 @@ const config: DocsThemeConfig = {
           r="230.938"
           fill="white"
           stroke="black"
-          stroke-width="12"
+          strokeWidth="12"
         />
         <rect
           x="129.729"
@@ -109,7 +109,7 @@ const config: DocsThemeConfig = {
           height="139.322"
           fill="black"
           stroke="black"
-          stroke-width="12"
+          strokeWidth="12"
         />
         <rect
           x="206.385"
@@ -118,7 +118,7 @@ const config: DocsThemeConfig = {
           height="139.322"
           fill="black"
           stroke="black"
-          stroke-width="12"
+          strokeWidth="12"
         />
         <rect
           x="206.146"
@@ -127,7 +127,7 @@ const config: DocsThemeConfig = {
           height="62.9055"
           fill="white"
           stroke="black"
-          stroke-width="12"
+          strokeWidth="12"
         />
       </svg>
       <div style={{ paddingBottom: 4 }}>docs</div>
@@ -169,24 +169,21 @@ const CustomHead: React.FC = () => {
       <meta property="og:description" content='PGN: Secure the future of public goods'  />
       <meta name="og:image" content="https://docs.publicgoods.network/social-card.png" />
 
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XJ8H07N5T"></script>
-      <NextScript>
-      {/* Add the Google Analytics script */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-7XJ8H07N5T"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-7XJ8H07N5T');
-            `,
-          }}
-        ></script>
-      </NextScript>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-7XJ8H07N5T"
+        strategy="afterInteractive"
+      />
+      <Script
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7XJ8H07N5T');
+          `,
+        }}
+      />
     </>
   );
 };
