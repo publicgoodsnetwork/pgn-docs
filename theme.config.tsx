@@ -11,7 +11,7 @@ const config: DocsThemeConfig = {
     dark:140
   },
   i18n: [
-    { locale: 'en', text: 'English' }
+    { locale: 'en-US', text: 'English' }
   ],
   logo: (
     <div style={{ height: 40, display: "flex", gap: 8, alignItems: "end" }}>
