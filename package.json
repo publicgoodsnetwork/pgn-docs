@@ -20,8 +20,10 @@
   "dependencies": {
     "autoprefixer": "^10.4.14",
     "next": "^13.0.6",
-    "nextra": "latest",
+    "next-sitemap": "^4.2.3",
+    "nextra": "2.13.2",
     "nextra-theme-docs": "latest",
+    "nextjs-google-analytics": "^2.3.3",
     "postcss": "^8.4.24",
     "react": "^18.2.0",
     "react-copy-to-clipboard": "^5.1.0",
