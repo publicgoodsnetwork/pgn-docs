@@ -7,8 +7,12 @@ import Script from "next/script";
 
 const config: DocsThemeConfig = {
   primaryHue: {
-    light:100,
+    light:125,
     dark:140
+  },
+  primarySaturation: {
+    light: 84,
+    dark: 100
   },
   i18n: [
     { locale: 'en-US', text: 'English' }
