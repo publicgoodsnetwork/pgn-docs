@@ -4,17 +4,17 @@ import { Callout } from 'nextra/components'
 
 ## High-traffic support requests
 
-### Why can't I bridge tokens from PGN back to Ethereum, immediately?
+### Why can't I bridge tokens from PGN back to Ethereum immediately?
 
-PGN is an OP Stack L2, which has a specific process for bridging tokens from the L2 (PGN) back to the L1 (Ethereum). 
+PGN is an OP Stack L2, which has a specific process for bridging tokens from the L2 (PGN) back to the L1 (Ethereum).
 
-**When bridging, your transaction must go through a seven day challenge period.**
+**When bridging, your transaction must go through a seven-day challenge period.**
 
 This challenge period is important, as it is designed to protect users from fraud.  During this period, a user can submit a fault proof to challenge a transaction before it is relayed from the L2 to the L1. 
 
 To successfully bridge from PGN to Ethereum, you must follow these instructions:
-1. *Submit the transaction using the bridge.*
-2. *Navigate to the [Transactions](https://bridge.sepolia.publicgoods.network/transactions) page.* You will eventually see your transaction show up with the status, "Waiting for state root".
+1. *Submit the transaction using a bridge.* This could be the [PGN native bridge](https://bridge.publicgoods.network), [Layerswap](https://www.layerswap.io/app), or [Superbridge](https://superbridge.app/).
+2. *Navigate to the [Transactions](https://bridge.publicgoods.network/transactions) page.* You will eventually see your transaction show up with the status, "Waiting for state root".
 3. Within 30 minutes, your transaction status will change to "Ready to prove." *Click the "Prove" button to initiate the challenge window.*
 4. The transaction status will change to "In challenge period" and will display how much time is left in the period via the "Time left" column. *Wait for the seven day window to close.*
 5. Once the challenge period is over, the transaction status will change to "Ready to relay". *Click the "Finalize" button to relay the transaction to PGN.*
@@ -89,7 +89,6 @@ While Gitcoin and SuperModular are incubating the initial development of PGN, th
 
 If you would like to learn more about becoming a partner, please reach out to us on [Telegram](https://t.me/+aR__6QhfEWs3ZTcx).
 
-
 ### Who is Gitcoin?
 
 Since 2017, Gitcoin has been building tools that enable communities to build, fund and protect what matters to them. 
@@ -152,16 +151,6 @@ We have several resources you can use to learn more about PGN:
 * Telegram: [Join](https://t.me/+aR__6QhfEWs3ZTcx)
 * Twitter: [@pgn_eth](https://twitter.com/pgn_eth)
 
-### What are some resources I can use to engage with PGN?
-
-You can transfer tokens to PGN using the following bridges:
-* Mainnet bridge: [bridge.publicgoods.network](https://bridge.publicgoods.network)
-* Sepolia Testnet bridge: [bridge.sepolia.publicgoods.network](https://bridge.sepolia.publicgoods.network)
-
-You can search transactions, wallets, and blocks on the network using the following explorers:
-* Mainnet block explorer: [explorer.publicgoods.network](https://explorer.publicgoods.network)
-* Testnet block explorer: [explorer.sepolia.publicgoods.network](https://explorer.sepolia.publicgoods.network)
-
 
 ## Using PGN
 
@@ -215,20 +204,9 @@ In this situation, OP Stack and PGN have a seven day challenge window that you m
 
 You can read more here: [Why do I need to wait a week when moving assets out of OP Mainnet?](https://help.optimism.io/hc/en-us/articles/4411895558171-Why-do-I-need-to-wait-a-week-when-moving-assets-out-of-OP-Mainnet-)
 
-### Are there any dApps on testnet that I can explore yet?
+### Are there any dApps that I can explore yet?
 
-We are working on building out an ecosystem page.
-
-As of July 25th, 2023, we have had several partners either fully deploy or deploy infrastructure on the PGN testnet, including the following:
-
-* [Gitcoin Grant Stack and Allo](https://www.gitcoin.co/)
-* [Zora](https://zora.co/)
-* [Jokerace](https://jokerace.xyz/)
-* [Beamer](https://app.beamerbridge.com/#/)
-* [Safe](https://safe.global/)
-* [The Graph](https://thegraph.com/)
-* [Goldsky](https://goldsky.com/)
-
+You can review our full list of ecosystem partners via our [PGN homepage](https://publicgoods.network/).
 
 ## Deploying contracts
 
@@ -256,9 +234,32 @@ The block gas limit is 30,000,000.
 You can use any of the development stacks that work with the OP stack to build with PGN. You can find a list of them on the following page:
 [Compatible development stacks](https://github.com/ethereum-optimism/optimism-tutorial/tree/main/getting-started)
 
-## The Graph
 
-### What is The Graph, and why is it important to PGN?
+## Ecosystem partners
+
+### Explorers
+
+#### What is Blockscout?
+
+Blockscout is a fully open-source blockchain explorer for Ethereum Virtual Machine (EVM) chains. It provides a comprehensive, easy-to-use interface for users to view, confirm, and inspect transactions on EVM blockchains. This includes Ethereum Mainnet, Ethereum Classic, Optimism, Gnosis Chain, and many other Ethereum testnets, private networks, L2s, and sidechains.
+
+You can utilize Blockscout to review transactions and blocks on PGN:
+* Mainnet: [explorer.publicgoods.network](https://explorer.publicgoods.network)
+* Testnet: [explorer.sepolia.publicgoods.network](https://explorer.sepolia.publicgoods.network)
+
+
+### Data infrastructure
+
+#### What is Covalent?
+
+Covalent is a blockchain data infrastructure platform that provides a unified API for accessing and analyzing data from multiple blockchains. The platform offers a comprehensive suite of tools and features for developers, enterprises, and institutions to build and manage blockchain applications.
+
+Covalent now supports PGN mainnet and testnet with realtime indexing, accessible via their Unified API, so developers can focus on building their applications and save time building their data stack.
+
+[Learn more](https://twitter.com/Covalent_HQ/status/1707058865722839157)
+
+
+#### What is The Graph?
 
 [The Graph](https://thegraph.com/) is a decentralized protocol for indexing and querying blockchain data. 
 
@@ -270,13 +271,82 @@ Graph nodes:
 * Mainnet: [graph-gitcoin-mainnet.hirenodes.io](https://graph-gitcoin-mainnet.hirenodes.io)
 * Testnet: [graph-gitcoin-testnet.hirenodes.io](https://graph-gitcoin-testnet.hirenodes.io)
 
-Subgraphs can also be deployed on [Goldsky](https://goldsky.com/), a high-performance hosted subgraph service.
+#### What is Goldsky?
 
-## Blockscout
+Goldsky is a real-time crypto data infrastructure platform that empowers developers to quickly spin up APIs using data stored on Ethereum and other networks. It provides a unified API that allows developers to access data from multiple blockchains, including Ethereum, Polygon, Optimism, and Avalanche. Goldsky's data is normalized and cleansed, making it easy to use and analyze.
 
-### What is Blockscout, and why is it important to PGN?
-[Blockscout](https://www.blockscout.com/) is a Blockchain explorer for Ethereum Networks that can be used to inspect and analyze EVM-based blockchains, such as PGN. 
+PGN subgraphs can be deployed on [Goldsky](https://goldsky.com/).
 
-You can utilize Blockscout to review transactions and blocks on PGN:
-* Mainnet: [explorer.publicgoods.network](https://explorer.publicgoods.network)
-* Testnet: [explorer.sepolia.publicgoods.network](https://explorer.sepolia.publicgoods.network)
+### Quadratic Funding grants programs
+
+#### What is Gitcoin Grants Stack?
+
+Gitcoin Grants Stack is a decentralized, protocol-enabled solution that streamlines the creation, management, and growth of community-powered Quadratic Funding grants programs. It facilitates the connection between grants program managers, project owners, and community members, enabling them to effectively manage and participate in grants programs.
+
+The [Gitcoin Grants](https://grants.gitcoin.co/) rounds are either partially or fully run on the PGN network. 
+
+### Community management and governance
+
+#### What is Guild?
+
+Guild.xyz is a platformless access management infrastructure that enables developers to build portable memberships, social structures around on-chain and off-chain requirements, and unique user journeys across apps. It provides a unified API that allows developers to access data from multiple blockchains and platforms, including Ethereum, Polygon, Optimism, Avalanche, Discord, Telegram, Twitter, Google Workspace, GitHub, and more. Guild.xyz's data is normalized and cleansed, making it easy to use and analyze.
+
+You can [gate access to your community programs using PGN](https://help.guild.xyz/en/articles/7546084-wallet-activity-as-guild-requirement).
+
+#### What is Jokerace?
+
+Jokerace is a decentralized platform for communities to make, execute, and record decisions. It uses a novel approach called "Jokerace contests" to facilitate informed and transparent decision-making. Jokerace contests are on-chain contests where participants submit proposals and the community votes on the best one. The winning proposal is then executed automatically.
+
+You can [host your contests on PGN](https://jokerace.xyz/).
+
+### DeFi
+
+#### What is Hedgey?
+
+Hedgey is a token vesting platform that helps teams manage the allocation and distribution of their tokens. It provides a suite of tools and services to help teams with everything from creating and managing vesting schedules to distributing tokens to investors. Hedgey is a non-custodial platform, which means that teams never lose control of their tokens.
+
+[Create & manage onchain token vesting, lockups, and streams for PGN](https://hedgey.finance/).
+
+### Bridges
+
+#### What is Layerswap?
+
+Layerswap is a reliable and secure cross-chain bridge that enables users to seamlessly transfer crypto assets between multiple blockchains, including Ethereum, Polygon, Avalanche, Optimism, Arbitrum, and more. It offers a user-friendly interface and a robust infrastructure to facilitate fast, low-cost, and secure cross-chain transactions.
+
+[Layerswap](https://www.layerswap.io/) is a great tool to bridge to and withdraw PGN from other L2s.
+
+#### What is Superbridge?
+
+Superbridge is a decentralized cross-chain bridge protocol that enables seamless asset transfers between Ethereum and various Layer 2 networks, including Polygon, Optimism, and Arbitrum. It utilizes smart contracts and a network of validators to ensure secure and efficient cross-chain transactions.
+
+[Superbridge](https://superbridge.app/) is a great tool to bridge to and withdraw PGN from other L2s.
+
+### Wallets
+
+#### What is Metamask?
+
+Ohh you know what Metamask is. 
+
+[Learn how to add PGN to your Metamask.](https://docs.publicgoods.network/using-pgn/adding-pgn-to-a-wallet)
+
+#### What is Rabby Wallet?
+
+Rabby is an open-source web3 wallet that offers a smooth multi-chain experience by automatically switching to the corresponding chain based on your visited web3 dApp. It provides a secure and user-friendly experience for interacting with decentralized applications (dApps) and managing digital assets.
+
+Rabby Wallet supports PGN.
+
+### Multi-party computation (MPC) platform
+
+#### What is Safe?
+
+Safe is a multi-party computation (MPC) platform that enables secure and private computation off-chain. It uses a novel approach called "secure shards" to divide computations into smaller pieces that can be executed by multiple parties without revealing their inputs. This allows Safe to perform computations on sensitive data without compromising privacy.
+
+You can [deploy a Safe on PGN via our smart contracts](https://docs.publicgoods.network/network-and-contract-details#safe-formerly-gnosis-safe), but we haven't deployed a Safe UI yet.
+
+### Marketplace (NFT)
+
+#### What is Zora?
+
+Zora is an open-source NFT marketplace protocol that aims to empower creators, collectors, and communities to build and curate the future of digital culture. It provides a decentralized platform for minting, trading, and curating NFTs, as well as a suite of tools for creators and communities to engage with their audience.
+
+You can deploy NFTs using PGN. [Have you minted yet?](https://zora.co/collect/pgn:0xadfabd2a6ee264d01c534c320e5b4b06ba19fc4f)
