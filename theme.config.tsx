@@ -8,10 +8,10 @@ import Script from "next/script";
 const config: DocsThemeConfig = {
   primaryHue: {
     light:125,
-    dark:140
+    dark:125
   },
   primarySaturation: {
-    light: 84,
+    light: 39,
     dark: 100
   },
   i18n: [
