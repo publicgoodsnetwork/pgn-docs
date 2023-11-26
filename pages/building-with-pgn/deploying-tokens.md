@@ -1,4 +1,4 @@
-#Deploying ERC-20 Tokens to PGN
+# Deploying ERC-20 Tokens to PGN
 
 ## Introduction
 
@@ -18,7 +18,7 @@ For both, you will need the following:
 * [Deploy using Hardhat](#deploy-with-hardhat)
 * [Considerations when deploying](#considerations-when-deploying)
 * [Steps to deploy an example USDC contract](#steps-to-deploy-an-example-usdc-contract)
-* [Add the token to the PGN bridge}(#add-the-token-to-the-pgn-bridge)
+* [Add the token to the PGN bridge](#add-the-token-to-the-pgn-bridge)
 
 ## UI-based deployment
 
