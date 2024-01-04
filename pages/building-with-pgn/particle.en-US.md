@@ -2,15 +2,13 @@
 # Particle Network Smart Wallet-as-a-Service
 
 
-[**Particle Network**](https://particle.network) is the Intent-Centric, Modular Access Layer of Web3. With Particle's Smart Wallet-as-a-Service, developers can curate an unparalleled user experience through modular and customizable EOA/AA embedded wallet components. Using MPC-TSS for key management, Particle can streamline user onboarding via familiar Web2 accounts—such as Google accounts, email addresses, and phone numbers.
+[**Particle Network**](https://particle.network) is the Intent-Centric, Modular Access Layer of Web3. Using MPC-TSS for key management, Particle facilitates social logins yielding embedded EOA/AA wallets.
   
 Particle Network's Smart Wallet-as-a-Service supports both PGN Mainnet and PGN Sepolia through either a standard EOA, or a smart account (supported by natively deployed account abstraction infrastructure on PGN), both resulting from a social login.
-  
-Using Particle Network Wallet-as-a-Service for a secure, flexible embedded wallet implementation on PGN Mainnet and Sepolia Testnet is quite simple; on this page, you'll find a high-level overview of this process.
 
 ## Integrating Particle's Smart Wallet-as-a-Service
 
-To integrate Particle's Smart Wallet-as-a-Service within your own application and therefore enabling social logins (leading to a non-custodial smart account), you'll need to begin by installing a number of libraries, as is shown below.
+To integrate Particle's Smart Wallet-as-a-Service within your own application and therefore enable social logins (leading to a non-custodial smart account), you'll need to begin by installing a number of libraries, as is shown below.
 
 ```shell
 yarn add @particle-network/auth-core-modal @particle-network/aa @particle-network/chains
