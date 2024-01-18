@@ -2,48 +2,18 @@
 
 import { Callout } from 'nextra/components'
 
-In this guide, we will discuss how to bridge ETH to PGN using the PGN mainnet bridge.
+In this guide, we will discuss how to withdrawal funds from PGN.
 
-<Callout type="warning">
-Withdrawing from the PGN native bridge or Superbridge is not reversible, is a 10-day process, and requires two L1 gas transactions.
+There are multiple options to bridge assets from PGN to ETH mainnet or other networks, depending on which token and what network you want to withdraw to. 
 
-Direct and immediate withdrawal is possible via [LayerSwap](https://www.layerswap.io/app) without L1 costs or 10-day challenge period.
-</Callout>
-
-## Available bridges
-
-Bridging Options on PGN:
-
-* [Superbridge](https://app.superbridge.app): L1 to L2 depositing and withdrawing of all officially deployed tokens, including DAI, USDT and GTC. There is a 7-day challenge period for withdraws back to L1, with unique features to make the process smooth.
-* [LayerSwap](https://www.layerswap.io/app): L1 to L2 depositing and withdrawing and L2 to L2 bridging for ETH. Withdrawls are not subject to the challenge period and clear in minutes. 
-* [PGN native bridge](https://bridge.publicgoods.network): L1 to L2 depositing and withdrawing of all officially deployed tokens, including DAI, USDT and GTC. There is a 7-day challenge period and process for withdraws back to L1. 
+* [LayerSwap](https://www.layerswap.io/app) allows users to withdraw or bridge ETH immediately to many other networks, including ETH mainnet, Optimism and Base. There are associated fees, but no L1 gas costs. 
+* [Minibridge](https://minibridge.chaineye.tools/) also allows users to withdraw or bridge ETH immediately to other networks, including ETH mainnet and Optimism. THere are associated fees, but no L1 gas costs. 
+* [Superbridge](https://app.superbridge.app) allows users to withdraw ETH, DAI and GTC to ETH mainnet, and to bundle the entire multistep process into one step. There are L1 costs, and the process is not reversible once the withdrawal has been started. 
+* The [PGN native bridge](https://bridge.publicgoods.network) also allows users to withdraw ETH, DAI and GTC. There is a 10 day challenge period, L1 gas costs, and the process is not reversible once the withdrawal has been started. 
 
 ## Using the PGN Bridge
 
-### Mainnet
-
-Follow these steps to bridge tokens from Ethereum (L1) to PGN mainnet network (L2):
-
-1. Navigate to the PGN bridge: 
-[bridge.publicgoods.network](https://bridge.publicgoods.network)
-2. Connect your wallet.
-3. Make sure the following are set up within the bridge.
-    * Set “Asset” to your desired token
-    * Set “From” to “Ethereum”
-    * Set “To” to “PGN”
-4. Enter the amount of tokens you’d like to bridge to PGN.
-5. Deposit your tokens to the bridge.
-6. Pay the gas fee.
-7. Wait for the transaction to process.
-
-Although the bridge will offer status updates when the transaction state changes, you might go as much as 30 seconds without an update. This is to be expected depending on the gas amount paid and the settlement speed on the L1. 
-
-*When bridging to Bedrock chains such as PGN, you may need to increase the gas for the bridge transaction to settle properly. If you are running into transaction errors when trying to bridge, try increasing the gas. More details can be found in the [Bedrock documentation](https://community.optimism.io/docs/developers/bedrock/differences/#deposits-from-the-underlying-l1-ethereum-goerli-etc-to-l2-op-mainnet-op-goerli-etc).*
-
-You can review your bridge transactions by navigating to the [block explorer](https://explorer.publicgoods.network) and searching for your wallet address. Note that you might need to use your actual wallet address instead of an ENS or custom domain name. 
-
-
-#### Bridging from PGN to Ethereum 
+### Bridging from PGN to Ethereum 
 
 When bridging tokens from PGN to Ethereum, your transaction must go through a 7-day challenge period. 
 
@@ -77,15 +47,4 @@ Some key details to understand around the timing of a challenge period:
 * You cannot challenge a transaction that has already been withdrawn.
 
 You can learn more by reading the [Optimism documentation](https://community.optimism.io/docs/developers/bridge/messaging/#understanding-the-challenge-period) on the subject. 
-
-
-## Testnet
-
-The instructions for testnet are very similar to mainnet. However, you will use the following PGN Sepolia bridge, and bridge from Sepolia to PGN Testnet instead. 
-[bridge.sepolia.publicgoods.network](https://bridge.sepolia.publicgoods.network)
-
-If you need to request testnet Sepolia ETH, you can do so via the following faucets:
-* [sepoliafaucet.com](https://sepoliafaucet.com)
-* [infura.io/faucet/sepolia](https://infura.io/faucet/sepolia)
-* [faucetlink.to/sepolia](https://faucetlink.to/sepolia)
 
