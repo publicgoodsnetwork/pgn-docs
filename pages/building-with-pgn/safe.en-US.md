@@ -2,19 +2,22 @@
 
 [Safe](https://safe.global/) is a robust and flexible smart contract platform, commonly utilized for asset management on Ethereum. It's a go-to choice for users requiring enhanced security and modular control over their digital assets. Traditionally, Safe contracts are employed for managing funds in a decentralized and secure manner. Users benefit from features like multi-signature (multisig) transactions, which require multiple confirmations before execution, ensuring greater oversight and reduced risk of unauthorized access.
 
-While PGN network integrates with Safe contracts, it's important to note that we're currently in the process of developing a dedicated user interface. Please help us upvote this proposal to help build out a Safe UI:
-https://forum.safe.global/t/deploy-safe-core-contracts-to-the-pgn-network/4352
-
-Until then, interactions with Safe contracts will require a more hands-on approach, typically involving direct contract interactions. Our docs aims to guide you through this process, ensuring a smooth and secure experience with Safe on the PGN network.
-
 ## Deploying a Safe 
 
-Until we have a working Safe UI, you can interact with the Safe contracts themselves using a couple of different strategies:
+### Use the Superchain Safe UI
 
-* Interact with the contracts themselves using the explorer
-* Use the Safe SDK
+We are thrilled to announce the availability of the Superchain Safe UI, a user-friendly interface specifically designed for interacting with Safe contracts on the Public Goods Network (PGN). This UI simplifies the process of creating, managing, and executing Safe transactions, eliminating the need for manual interaction with the underlying smart contracts.
 
-### Interact with the smart contracts
+To get started with the Superchain Safe UI:
+
+1. Navigate to the [Superchain Safe UI](https://staging.safe.optimism.io/welcome?chain=PGN) 
+2. Connect your wallet
+3. Follow the on-screen instructions to create a new Safe, import an existing Safe, or interact with existing Safe contracts.
+
+### Alternatives to the Superchain Safe UI
+While the Superchain Safe UI is the recommended method for most users, alternative options exist for those comfortable with interacting directly with the smart contracts:
+
+#### Interact with the smart contracts
 
 Let's explore the steps you'd need to take to interact with the smart contracts using the PGN explorer:
 
@@ -25,7 +28,7 @@ Let's explore the steps you'd need to take to interact with the smart contracts 
 5. Expand the contract dropdown under the "Contract information" section
 6. Enter your transaction and value into the input boxes and submit with the "Write" button
 
-### Use the Safe SDK
+#### Use the Safe SDK
 
 We'll provide some guidance here, but it is important or you to read through the [Safe Core SDK](https://docs.safe.global/safe-core-aa-sdk/safe-core-sdk) docs to understand this method. 
 
