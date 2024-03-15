@@ -3,6 +3,7 @@
   "deploying-tokens": "Deploying ERC-20 tokens",
   "ethereum-vs-pgn": "Ethereum vs PGN",
   "subgraphs": "Subgraphs",
+  "subquery": "SubQuery Indexer",
   "safe": "Safe",
   "fees": "Estimating Fees"
 }
